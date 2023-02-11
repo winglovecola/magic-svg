@@ -46,7 +46,7 @@ question[0] = {
 
 question[2] = {
     type: 'input',
-    message: 'This is the color code you have chosen. Make change if necessary',
+    message: 'Is the color code you have chosen for your font? Make change if necessary.',
     name: 'shapeColorUse',
     default: shapeColorCode,
 
@@ -104,7 +104,7 @@ question[3] = {
 
 question[5] = {
     type: 'input',
-    message: 'Is the color code you have chosen for your font? Make change if necessary',
+    message: 'Is the color code you have chosen for your font? Make change if necessary.',
     name: 'fontColorUse',
     default: shapeColorCode,
 
