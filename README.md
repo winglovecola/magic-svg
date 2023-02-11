@@ -22,7 +22,7 @@ Magic SVG is a lightweight node app that creates a professional SVG file for fre
 
 ## Preview
 
-![Screenshot](https://github.com/winglovecola/gREADME/blob/main/assets/images/screenshot.jpg?raw=true)
+![Screenshot](https://github.com/winglovecola/magic-svg/blob/main/assets/images/screenshot.jpg?raw=true)
 
 ### [Introduction Video](https://drive.google.com/file/d/1R-zRxrurg3v7jXzRhUcwlPvLgO96gkWl/view?usp=sharing)
 
