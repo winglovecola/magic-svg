@@ -39,7 +39,7 @@ let question = [];
 question[0] = {
     type: 'list',
     message: 'Select a shape',
-    choices: ['Circle', 'Rectangle', 'Triangle'],
+    choices: ['Circle', "Square", 'Rectangle', 'Triangle'],
     name: 'shape',
 };
 
@@ -152,11 +152,31 @@ inquirer
     var thisText, textElement;
     var svgCanvas, svgImage;
 
+    var svgCanvasWidth = 300, svgCanvasHeight = 200;
+
 
     //Create shape objects and render svg element
     if (answers.shape == "Circle")
     {
-        thisShape = new SVG.Circle (answers.shapeColorUse, 150, 100, 80);
+        let x = Math.round (svgCanvasWidth / 2);
+        let y = Math.round (svgCanvasHeight / 2);
+        let radius = 80;
+
+        thisShape = new SVG.Circle (answers.shapeColorUse, x, y, radius);
+        shapeElement = thisShape.render ();
+
+        thisText = new SVG.textPrint (answers.characters, answers.fontColorUse, "Arial", "60", "150", "125");
+        textElement = thisText.render ();  
+    }
+    else if (answers.shape == "Square")
+    {
+        let shapeWidth = 150;
+        let shapeHeight = 150;
+
+        let x = Math.round ((svgCanvasWidth - shapeWidth) / 2);
+        let y = Math.round ((svgCanvasHeight - shapeHeight) / 2);
+        
+        thisShape = new SVG.Square (answers.shapeColorUse, x, y, shapeWidth);
         shapeElement = thisShape.render ();
 
         thisText = new SVG.textPrint (answers.characters, answers.fontColorUse, "Arial", "60", "150", "125");
@@ -164,7 +184,14 @@ inquirer
     }
     else if (answers.shape == "Rectangle")
     {
-        thisShape = new SVG.Rectangle (answers.shapeColorUse, 10, 10, 300, 200);
+        let shapeWidth = 200;
+        let shapeHeight = 150;
+        
+        let x = Math.round ((svgCanvasWidth - shapeWidth) / 2);
+        let y = Math.round ((svgCanvasHeight - shapeHeight) / 2);
+                
+        
+        thisShape = new SVG.Rectangle (answers.shapeColorUse, x, y, shapeWidth, shapeHeight);
         shapeElement = thisShape.render ();
 
         thisText = new SVG.textPrint (answers.characters, answers.fontColorUse, "Arial", "60", "150", "125");
@@ -180,8 +207,10 @@ inquirer
     }
   
     //create svg canvas
-    svgCanvas = new SVG.svgCanvas (shapeElement, textElement, 300, 200);
+    svgCanvas = new SVG.svgCanvas (shapeElement, textElement, svgCanvasWidth, svgCanvasHeight);
     svgImage = svgCanvas.render ();  
+
+
 
     console.log ("\n\n-----SVG-------------------------------------------\n\n" + svgImage + "\n\n---------------------------------------------------\n\n");
 

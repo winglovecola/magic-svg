@@ -5,7 +5,7 @@
 
 ## Description
 
-Magic SVG is a lightweight node app that can creates professional SVG file for free. Simply fill in the required fields to create a custom svg file.
+Magic SVG is a lightweight node app that can create professional SVG file for free. Simply fill in the required fields to create a custom svg file.
 
 
 
