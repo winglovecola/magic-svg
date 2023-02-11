@@ -1,19 +1,18 @@
-
 //load library
+import * as SVG from './lib/svg.js'; // import all svg class
+import * as Utility from './lib/utility.js'; //import savefile function
+
+import inquirer from 'inquirer';
+import rxjs from 'rxjs'; //Inquirer uses the JS reactive extension to handle events and async flows. Enable function  prompts.next (question[i])
+
+
+
 //const inquirer = require('inquirer');
 //const fs = require('fs');
 //const path = require('path');
 //const Rx = require('rxjs');
 
 //const {Shape, Circle, Rectangle, Triangle, CharacterPrint, svgImage} = require('./lib/svg');
-
-
-
-import * as SVG from './lib/svg.js'; // import all svg class
-import * as Utility from './lib/utility.js'; //import savefile function
-
-import inquirer from 'inquirer';
-import rxjs from 'rxjs'; //Inquirer uses the JS reactive extension to handle events and async flows. Enable function  prompts.next (question[i])
 
 
 
@@ -60,7 +59,6 @@ question[2] = {
 
         return true;
     }
-
 };
 
 
@@ -101,7 +99,6 @@ question[3] = {
 
         return true;
     }
-
 };
 
 
@@ -120,7 +117,6 @@ question[5] = {
 
         return true;
     }
-
 };
 
 
@@ -163,7 +159,7 @@ inquirer
         thisShape = new SVG.Circle (answers.shapeColorUse, 150, 100, 80);
         shapeElement = thisShape.render ();
 
-        thisText = new SVG.textPrint (answers.characters, answers.fontColorUse, "Arial", "60", "150", "120");
+        thisText = new SVG.textPrint (answers.characters, answers.fontColorUse, "Arial", "60", "150", "125");
         textElement = thisText.render ();  
     }
     else if (answers.shape == "Rectangle")
