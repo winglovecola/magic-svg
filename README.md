@@ -1,11 +1,11 @@
-# gREADME
+# Magic SVG
 ![License Badge](https://img.shields.io/badge/license-MIT%20License-lightgreen)
 
 
 
 ## Description
 
-gREADME is a light weight node app that help you create a professional README.md for your github project really fast. Simply fill in the required fields and skip any section by enter a blank space.
+Magic SVG is a lightweight node app that creates a professional SVG file for free. Simply fill in the required fields to create a custom svg file.
 
 
 
