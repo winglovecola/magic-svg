@@ -30,7 +30,7 @@ Magic SVG is a lightweight node app that can create professional SVG file for fr
 
 
 
-## Sample SVG 
+## SVG Sample 
 
 ![SVG Sample](https://github.com/winglovecola/magic-svg/blob/main/examples/Circle-2023-02-11T21-20-41.618Z.svg)
 
